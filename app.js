@@ -25,3 +25,23 @@ function operatorBtnPressed(sign) {
   value1 = parseInt(document.getElementById("inputBox").value);
   newLine = true;
 }
+
+function equalsBtnPressed() {
+  let value2 = parseInt(document.querySelector("#inputBox").value);
+  let final;
+  switch (currentOperator) {
+    case "+":
+      final = value1 + value2;
+      break;
+    case "x":
+      final = value1 * value2;
+      break;
+    case "/":
+      final = value1 / value2;
+      break;
+    case "-":
+      final = value1 - value2;
+      break;
+  }
+  document.querySelector("#inputBox").value = final;
+}
